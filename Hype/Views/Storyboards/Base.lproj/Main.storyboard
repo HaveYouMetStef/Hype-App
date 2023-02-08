@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tby-Oi-rcj">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="skc-WK-YDO">
+            <objects>
+                <viewController id="tby-Oi-rcj" customClass="SignUpViewController" customModule="Hype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="luT-D3-MmU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BGS-7m-ni7">
+                                <rect key="frame" x="24" y="358" width="345" height="136"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbR-RZ-Tec">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qo3-pR-2LA">
+                                        <rect key="frame" x="0.0" y="34" width="345" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkn-O6-5Sn">
+                                        <rect key="frame" x="0.0" y="68" width="345" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a short bio here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-pD-D4D">
+                                        <rect key="frame" x="0.0" y="102" width="345" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OB-UE-q3l">
+                                <rect key="frame" x="287.33333333333331" y="518" width="81.666666666666686" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="tby-Oi-rcj" eventType="touchUpInside" id="rQ8-oZ-sk3"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4N-3b-Yv7">
+                                <rect key="frame" x="24" y="148" width="173" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E4N-3b-Yv7" secondAttribute="height" multiplier="1:1" id="26q-l0-2EL"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="0Ek-14-mwz" kind="embed" identifier="photoPickerVC" id="psI-rd-dg1"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ja6-QR-Kqt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BGS-7m-ni7" firstAttribute="leading" secondItem="Ja6-QR-Kqt" secondAttribute="leading" constant="24" id="A8H-sn-wve"/>
+                            <constraint firstItem="E4N-3b-Yv7" firstAttribute="width" secondItem="BGS-7m-ni7" secondAttribute="width" multiplier="0.5" id="DH3-Ze-sIL"/>
+                            <constraint firstItem="8OB-UE-q3l" firstAttribute="trailing" secondItem="BGS-7m-ni7" secondAttribute="trailing" id="NJp-HB-tK3"/>
+                            <constraint firstItem="BGS-7m-ni7" firstAttribute="top" secondItem="E4N-3b-Yv7" secondAttribute="bottom" constant="38" id="TtL-kw-JOj"/>
+                            <constraint firstItem="BGS-7m-ni7" firstAttribute="centerY" secondItem="luT-D3-MmU" secondAttribute="centerY" id="UO3-Y3-8kU"/>
+                            <constraint firstItem="BGS-7m-ni7" firstAttribute="leading" secondItem="E4N-3b-Yv7" secondAttribute="leading" id="XqS-Iq-QjM"/>
+                            <constraint firstItem="8OB-UE-q3l" firstAttribute="top" secondItem="BGS-7m-ni7" secondAttribute="bottom" constant="24" id="YQR-dZ-COp"/>
+                            <constraint firstItem="Ja6-QR-Kqt" firstAttribute="trailing" secondItem="BGS-7m-ni7" secondAttribute="trailing" constant="24" id="pow-tt-jCR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioTextField" destination="ZaN-pD-D4D" id="TaW-Pi-I8e"/>
+                        <outlet property="photoContainerView" destination="E4N-3b-Yv7" id="xef-mw-dv8"/>
+                        <outlet property="usernameTextField" destination="Qo3-pR-2LA" id="Bke-Qe-yPp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUv-jh-vKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="-811"/>
+        </scene>
+        <!--PhotoPicker-->
+        <scene sceneID="aP6-RQ-PCq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoPicker" id="0Ek-14-mwz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lng-Md-jMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="-968"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
